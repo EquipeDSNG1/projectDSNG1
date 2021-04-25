@@ -16,7 +16,7 @@ This project is part of our personal portfolio and will complete our series in h
 
 Email-me: equipe.dsng1@gmail.com
 
-Also, you can use this project as you wish, be for study, be me for make improvements or earn money with it!
+Also, you can use this project as you wish, be it for studying, be it for making improvements or earn money with it!
 
 ## Some Observations about this game
 
