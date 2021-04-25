@@ -12,7 +12,7 @@ The idea of the game is:
 
 ## Why?
 
-This project is part of our personal portfolio and will complete our series in high school, so I would be happy if you could give me some feedback on the project, code, structure or anything you can report, it will help me to be a developer best! Its free.
+This project is part of our personal portfolio and will complete our years in high school, so I would be happy if you could give me some feedback on the project, code, structure or anything you can report, it will help me to be a better developer! Also it's free.
 
 Email-me: equipe.dsng1@gmail.com
 
