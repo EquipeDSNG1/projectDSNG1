@@ -1,2 +1,2 @@
 # projectDSNG1
-Este é o repositório referente ao projeto em conjunto do curso "DS".
+This is a repository for the game "Ciclone lost in the wild".
