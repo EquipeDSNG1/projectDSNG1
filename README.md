@@ -17,5 +17,5 @@ Also, you can use this project as you wish, be for study, be me for make improve
 
 ## Some Observations about this game
 
-*This game has the only academic objective.
-*If you are interested you can like our [10-page document](https://docs.google.com/document/d/18WIKmJ_koxarhzvCuLUkQCziGASJc1GdZGlx_Clz2T8/edit?usp=sharing)
+* This game has the only academic objective.
+* If you are interested you can like our [10-page document](https://docs.google.com/document/d/18WIKmJ_koxarhzvCuLUkQCziGASJc1GdZGlx_Clz2T8/edit?usp=sharing)
