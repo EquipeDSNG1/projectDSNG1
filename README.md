@@ -18,4 +18,4 @@ Also, you can use this project as you wish, be for study, be me for make improve
 ## Some Observations about this game
 
 * This game has the only academic objective.
-* If you are interested you can like our [10-page document](https://docs.google.com/document/d/18WIKmJ_koxarhzvCuLUkQCziGASJc1GdZGlx_Clz2T8/edit?usp=sharing)
+* If you are interested you may like to take a look at our [notes](https://drive.google.com/drive/folders/1OKlKHqNDq7d5Li7_rooaGlfkqT3ILrMV?usp=sharing).
