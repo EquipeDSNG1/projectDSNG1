@@ -1,9 +1,21 @@
 # Ciclone lost in the wild
 `We don't have game screens yet :(`
 
-# About this project:
+## About this project:
 The idea of the game is:
 
 "A good game to spend time with a lot of suspense, action and intrigue"
 
-**PS**: Suspense game was just the context chosen by us for this project, but all the code in this app can be reused for any other similar game.
+**PS**: A survival game was just the context chosen by us for this project, but all the code in this application can be reused for any other similar game. Use your creativity!
+
+## Why?
+This project is part of our personal portfolio and will complete our series in high school, so I would be happy if you could give me some feedback on the project, code, structure or anything you can report, it will help me to be a developer best! Its free.
+
+Email-me: equipe.dsng1@gmail.com
+
+Also, you can use this project as you wish, be for study, be me for make improvements or earn money with it!
+
+## Some Observations about this game
+
+*This game has the only academic objective.
+*If you are interested you can like our [10-page document](https://docs.google.com/document/d/18WIKmJ_koxarhzvCuLUkQCziGASJc1GdZGlx_Clz2T8/edit?usp=sharing)
