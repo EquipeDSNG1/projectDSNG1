@@ -20,7 +20,7 @@ Also, you can use this project as you wish, be for study, be me for make improve
 
 ## Some Observations about this game
 
-* This is game is an academic project.
+* This game has the only an academic purpose.
 * If you are interested you may like to take a look at our [notes](https://drive.google.com/drive/folders/1OKlKHqNDq7d5Li7_rooaGlfkqT3ILrMV?usp=sharing).
 
 ## Installers
