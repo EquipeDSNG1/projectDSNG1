@@ -1,6 +1,6 @@
 # Ciclone lost in the wild
 
-`We don't have game screens yet :(`
+`We don't have game screens yet`
 
 ## About this project:
 
