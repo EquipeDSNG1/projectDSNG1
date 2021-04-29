@@ -26,4 +26,4 @@ Also, you can use this project as you wish, be it for studying, be it for making
 ## Installers
 
 If you want to test the app, the installers are listed bellow:
-`We don't have the installers yet :(`
+`We don't have the installers yet`
