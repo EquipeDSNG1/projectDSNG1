@@ -13,6 +13,11 @@ function Inimigo () {
     
 }
 
+function Tiro(){
+
+
+}
+
 function animate (){
     requestAnimationFrame(animate);
 }
