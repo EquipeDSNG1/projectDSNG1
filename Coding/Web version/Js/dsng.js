@@ -1,23 +1,52 @@
-var canvas = document.querySelector('canvas');
+const canvas = document.
+	querySelector('canvas');
+const ctx = canvas.getContext('2d')
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = innerWidth;
+canvas.height = innerHeight;
 
-var c = canvas.getContext('2d');
 
-function Principal (){
+const startBtn = document.querySelector('#startBtn')
+const start = document.querySelector('#start')
+
+class Player {
+   
+}
+
+class Projectile {
+	constructor(x, y, radius, color, velocity) {
+		this.x = x
+		this.y = y
+		this.radius = radius
+		this.color = color
+		this.velocity = velocity
+	}
+
+
+
+}
+
+class Enemy {
     
 }
+class Particle {
+	constructor(x, y, radius, color, velocity) {
+		this.x = x
+		this.y = y
+		this.radius = radius
+		this.color = color
+		this.velocity = velocity
+		this.alpha = 1
+	}
 
-function Inimigo () {
-    
+
+
 }
 
-function Tiro(){
-
-
+function animate() {
+	animationId = requestAnimationFrame(animate)
 }
 
-function animate (){
-    requestAnimationFrame(animate);
-}
+startBtn.addEventListener('click', () => {
+	start.style.display = 'none'
+})
