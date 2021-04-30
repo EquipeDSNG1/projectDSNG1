@@ -16,7 +16,58 @@ window.addEventListener('keydown', function(event) {
 })
 
 class Player {
-	
+	constructor(x, y, radius, dx, dy, color){
+		this.x = x;
+    this.y = y;
+    this.radius = radius;
+    this.dx = dx;
+    this.dy = dy;
+    this.color = color;
+
+    this.draw = function(){
+        ctx.beginPath();
+        ctx.strokeStyle = this.color;
+        ctx.fillStyle = this.color;
+        ctx.arc(this.x,this.y,this.radius,0,Math.PI*2,false);
+        ctx.stroke();
+        ctx.fill();
+    }
+
+    this.update = function () {
+        if((tecla =='d') || (tecla =='D')) {
+            if(this.x >= 0){
+                this.x = this.x + this.dx;
+            }
+            tecla = '';
+        }
+
+        if((tecla =='a') || (tecla =='A')) {
+            if(this.x <= canvas.width) {
+                this.x = this.x - this.dx;
+            }
+
+            tecla = '';
+        }
+
+        if((tecla =='w') || (tecla =='W')) {
+            if(this.y>=0) {
+                this.y = this.y - this.dy;
+            }
+
+            tecla = '';
+        }
+
+        if((tecla =='s') || (tecla =='S')) {
+            if(this.y <= 800) {
+                this.y = this.y + this.dy;
+            }
+
+            tecla = '';
+        }
+
+        this.draw();
+    }
+	}
 }
 
 class Projectile {
@@ -49,60 +100,6 @@ class Particle {
 
 }
 
-function Principal (x, y, radius, dx, dy, color){
-
-    this.x = x;
-    this.y = y;
-    this.radius = radius;
-    this.dx = dx;
-    this.dy = dy;
-    this.color = color;
-
-    this.draw = function(){
-        ctx.beginPath();
-        ctx.strokeStyle = this.color;
-        ctx.fillStyle = this.color;
-        ctx.arc(this.x,this.y,this.radius,0,Math.PI*2,false);
-        ctx.stroke();
-        ctx.fill();
-    }
-
-    this.update = function () {
-        if((tecla=='d') || (tecla=='D')) {
-            if(this.x >= 0){
-                this.x = this.x + this.dx;
-            }
-            tecla = '';
-        }
-
-        if((tecla=='a') || (tecla=='A')) {
-            if(this.x <= 800) {
-                this.x = this.x - this.dx;
-            }
-
-            tecla = '';
-        }
-
-        if((tecla=='w') || (tecla=='W')) {
-            if(this.y>=0) {
-                this.y = this.y - this.dy;
-            }
-
-            tecla = '';
-        }
-
-        if((tecla=='s') || (tecla=='S')) {
-            if(this.y <= 800) {
-                this.y = this.y + this.dy;
-            }
-
-            tecla = '';
-        }
-
-        this.draw();
-    }
-}
-
 function animate() {
 	animationId = requestAnimationFrame(animate)
 
@@ -111,7 +108,8 @@ function animate() {
 	bola.update();
 }
 
-var bola = new Principal(10, 10, 10, 10, 10, 'blue');
+
+var bola = new Player(100, 100, 15, 10, 10, 'red');
 
 startBtn.addEventListener('click', () => {
 	start.style.display = 'none'
