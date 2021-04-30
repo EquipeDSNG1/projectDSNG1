@@ -11,9 +11,9 @@ Integrantes:
 
 Descrição do papel:	
 
-	| Vermelho |: Responsavel pela criação do roteiro e do universo;
-	|  Laranja |: Responsavel pelo design e a criação;
-	|  Amarelo |: Responsavel pela trilha sonora e gravações;
-	|   Verde  |: Responsavel pela continuidade e documentação;
-	|   Azul   |: Responsavel pela computação gráfica;
-	|   Roxo   |: Responsavel pela Programação.
+	| Vermelho |: Responsible for creating the script and the universe;
+	|  Laranja |: Responsible for design and creation;
+	|  Amarelo |: Responsible for the soundtrack and recordings;
+	|   Verde  |: Responsible for continuity and documentation;
+	|   Azul   |: Responsible for computer graphics;
+	|   Roxo   |: Responsible for Programming.
