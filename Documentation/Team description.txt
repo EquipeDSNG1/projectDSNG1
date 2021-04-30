@@ -1,0 +1,19 @@
+ETE FMC
+Equipe: DSNG 1
+
+Integrantes:
+	Vinícius Gabriel Limoeiro Cauvilla 	Nº: 38		| Vermelho |
+	Kennedy Emanoel da Silveira Barbosa	Nº: 25   	|  Laranja |
+	Gabriel Mota Pereira			Nº: 16		|  Amarelo |
+	Guilherme Henrique Oliveira Silveira 	Nº: 18		|   Verde  |
+	João Vitor Pereira Domiciano		Nº: 21		|   Azul   |
+	André Dias Balbino 			Nº: 03		|   Roxo   |
+
+Descrição do papel:	
+
+	| Vermelho |: Responsavel pela criação do roteiro e do universo;
+	|  Laranja |: Responsavel pelo design e a criação;
+	|  Amarelo |: Responsavel pela trilha sonora e gravações;
+	|   Verde  |: Responsavel pela continuidade e documentação;
+	|   Azul   |: Responsavel pela computação gráfica;
+	|   Roxo   |: Responsavel pela Programação.
