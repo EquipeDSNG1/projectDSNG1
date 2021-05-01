@@ -5,10 +5,6 @@ const ctx = canvas.getContext('2d')
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 
-
-const startBtn = document.querySelector('#startBtn')
-const start = document.querySelector('#start')
-
 var tecla;
 
 window.addEventListener('keydown', function(event) {
@@ -110,8 +106,3 @@ function animate() {
 
 
 var bola = new Player(100, 100, 15, 10, 10, 'red');
-
-startBtn.addEventListener('click', () => {
-	start.style.display = 'none'
-	animate();
-})
