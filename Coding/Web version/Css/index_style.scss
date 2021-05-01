@@ -1,6 +1,6 @@
-$base: #0A0708;
+$base: #0A0A0A;
 $white: #ece8e1;
-$grey: #B1B1B1;
+$grey: #4F4F4F;
 $height: 54px;
 $transition: 0.3s ease-out all;
 
@@ -132,7 +132,7 @@ body {
 article{
     background: $base;
     & a{
-        color: $grey;
+        color: $white;
         text-decoration: none;
         position: relative;
     }
