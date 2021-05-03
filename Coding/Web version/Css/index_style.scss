@@ -20,7 +20,8 @@ body {
     justify-content: center;
     flex-flow: column;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
+    background-position: center;
     & a {
         width: 100%;
         max-width: 240px;
