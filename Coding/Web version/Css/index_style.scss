@@ -6,12 +6,11 @@ $transition: 0.3s ease-out all;
 
 body {
     background-image: url(../Img/cape.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: "Muli";
     position: absolute;
     margin: 0px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 #Btn {
