@@ -9,6 +9,9 @@ body {
     font-family: "Muli";
     position: absolute;
     margin: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #Btn {
@@ -19,9 +22,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     & a {
         width: 100%;
         max-width: 240px;
