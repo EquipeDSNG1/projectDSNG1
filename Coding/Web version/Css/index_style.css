@@ -1,4 +1,5 @@
 body {
+  background: #060002;
   background-image: url(../Img/cape.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,7 +9,7 @@ body {
 }
 
 #Btn {
-  background: #0A0A0A;
+  background: #0B0909;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,23 +34,23 @@ body {
   padding: 8px;
   font-size: 0.8rem;
   font-weight: 900;
-  color: #4F4F4F;
+  color: #44444C;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  -webkit-box-shadow: 0 0 0 1px inset rgba(236, 232, 225, 0.3);
-          box-shadow: 0 0 0 1px inset rgba(236, 232, 225, 0.3);
+  -webkit-box-shadow: 0 0 0 1px inset rgba(214, 214, 214, 0.3);
+          box-shadow: 0 0 0 1px inset rgba(214, 214, 214, 0.3);
   position: relative;
   margin: 10px 0;
 }
 
 #Btn a.white:hover > p {
-  color: #ece8e1;
+  color: #D6D6D6;
 }
 
 #Btn a.white > p {
-  background: #ece8e1;
-  color: #0A0A0A;
+  background: #D6D6D6;
+  color: #0B0909;
 }
 
 #Btn a.white > p span.base {
@@ -61,7 +62,7 @@ body {
   width: 1px;
   position: absolute;
   height: 8px;
-  background: #0A0A0A;
+  background: #0B0909;
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -94,7 +95,7 @@ body {
   width: 100%;
   height: 100%;
   left: 0;
-  border: 1px solid #4F4F4F;
+  border: 1px solid #44444C;
 }
 
 #Btn a p span.base:before {
@@ -103,7 +104,7 @@ body {
   height: 2px;
   left: -1px;
   top: -1px;
-  background: #0A0A0A;
+  background: #0B0909;
   position: absolute;
   -webkit-transition: 0.3s ease-out all;
   transition: 0.3s ease-out all;
@@ -112,7 +113,7 @@ body {
 #Btn a p span.bg {
   left: -5%;
   position: absolute;
-  background: #4F4F4F;
+  background: #44444C;
   width: 0;
   height: 100%;
   z-index: 3;
@@ -137,7 +138,7 @@ body {
   height: 4px;
   right: 0;
   bottom: 0;
-  background: #0A0A0A;
+  background: #0B0909;
   position: absolute;
   -webkit-transition: 0.3s ease-out all;
   transition: 0.3s ease-out all;
@@ -145,7 +146,7 @@ body {
 }
 
 #Btn a:hover {
-  color: #ece8e1;
+  color: #D6D6D6;
 }
 
 #Btn a:hover span.bg {
@@ -153,15 +154,15 @@ body {
 }
 
 #Btn a:hover span.text:after {
-  background: #ece8e1;
+  background: #D6D6D6;
 }
 
 article {
-  background: #0A0A0A;
+  background: #0B0909;
 }
 
 article a {
-  color: #ece8e1;
+  color: #D6D6D6;
   text-decoration: none;
   position: relative;
 }
