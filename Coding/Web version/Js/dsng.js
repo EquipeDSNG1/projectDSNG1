@@ -5,20 +5,27 @@ const ctx = canvas.getContext('2d')
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 
-var tecla;
+
+var key;
+var key_run;
 
 window.addEventListener('keydown', function(event) {
-    tecla = event.key;
+    key = event.key;
 })
 
+window.addEventListener( 'keydown', function( eventrun ) {
+	key_run = eventrun.getModifierState( 'Shift' );
+	console.log( key_run );
+  });
+
 class Player {
-	constructor(x, y, radius, dx, dy, color){
+	constructor(x,y,radius, v,vr, color){
 		this.x = x;
-    this.y = y;
-    this.radius = radius;
-    this.dx = dx;
-    this.dy = dy;
-    this.color = color;
+        this.y = y;
+        this.radius = radius;
+        this.v = v;
+	    this.vr = vr;
+        this.color = color;
 
     this.draw = function(){
         ctx.beginPath();
@@ -30,35 +37,56 @@ class Player {
     }
 
     this.update = function () {
-        if((tecla =='d') || (tecla =='D')) {
-            if(this.x >= 0){
-                this.x = this.x + this.dx;
+        if((key=='d') || (key=='D')) {
+			if(key_run  ==  1){
+				if(this.x-this.radius>=0) {
+					this.x = this.x + this.vr;
+				}
+			}
+            if((this.x + this.radius) < canvas.height){
+                this.x = this.x + this.v;
             }
-            tecla = '';
+
+            key = '';
         }
 
-        if((tecla =='a') || (tecla =='A')) {
-            if(this.x <= canvas.width) {
-                this.x = this.x - this.dx;
+        if((key=='A') || (key=='a')) {
+			if(key_run  ==  1){
+				if(this.x-this.radius>=0) {
+					this.x = this.x - this.vr;
+				}
+			}
+            if((this.x - this.radius) < canvas.height){
+                this.x = this.x - this.v;
             }
 
-            tecla = '';
+            key = '';
         }
 
-        if((tecla =='w') || (tecla =='W')) {
-            if(this.y>=0) {
-                this.y = this.y - this.dy;
+        if((key=='w') || (key=='W')) {
+			if(key_run  ==  1){
+				if(this.y-this.radius>=0) {
+					this.y = this.y - this.vr;
+				}
+			}
+            if(this.y-this.radius>=0) {
+                this.y = this.y - this.v;
             }
 
-            tecla = '';
+            key = '';
         }
 
-        if((tecla =='s') || (tecla =='S')) {
-            if(this.y <= 800) {
-                this.y = this.y + this.dy;
+        if((key=='s') || (key=='S')) {
+			if(key_run  ==  1){
+				if(this.y-this.radius>=0) {
+					this.y = this.y + this.vr;
+				}
+			}
+            if((this.y + this.radius) < canvas.height){
+                this.y = this.y + this.v;
             }
 
-            tecla = '';
+            key = '';
         }
 
         this.draw();
@@ -105,4 +133,5 @@ function animate() {
 }
 
 
-var bola = new Player(100, 100, 15, 10, 10, 'red');
+var bola = new Player(100, 100, 10, 6, 9, 'red');
+animate();
