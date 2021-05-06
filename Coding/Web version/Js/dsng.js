@@ -135,3 +135,4 @@ function animate() {
 
 var bola = new Player(100, 100, 10, 6, 9, 'red');
 animate();
+
