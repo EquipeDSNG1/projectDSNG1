@@ -2,26 +2,7 @@ body {
   background: #262626;
 }
 
-.fa-2x {
-  font-size: 2em;
-}
-
-.fa {
-  position: relative;
-  display: table-cell;
-  width: 60px;
-  height: 36px;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 20px;
-}
-
-.main-menu:hover, nav.main-menu.expanded {
-  width: 250px;
-  overflow: visible;
-}
-
-.main-menu {
+nav.main-menu {
   background: #212121;
   border-right: 1px solid #eb3553;
   position: absolute;
@@ -36,17 +17,37 @@ body {
   z-index: 1000;
 }
 
-.main-menu > ul {
+nav.main-menu .fa-2x {
+  font-size: 2em;
+}
+
+nav.main-menu .fa {
+  position: relative;
+  display: table-cell;
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+nav.main-menu > ul {
   margin: 7px 0;
 }
 
-.main-menu li {
+nav.main-menu > ul ul.logout {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+nav.main-menu > li {
   position: relative;
   display: block;
   width: 250px;
 }
 
-.main-menu li > a {
+nav.main-menu li > a {
   position: relative;
   display: table;
   border-collapse: collapse;
@@ -59,17 +60,7 @@ body {
   transition: all .1s linear;
 }
 
-.main-menu .nav-icon {
-  position: relative;
-  display: table-cell;
-  width: 60px;
-  height: 36px;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 18px;
-}
-
-.main-menu .nav-text {
+nav.main-menu .nav-text {
   position: relative;
   display: table-cell;
   vertical-align: middle;
@@ -77,10 +68,15 @@ body {
   font-family: 'Titillium Web', sans-serif;
 }
 
-.main-menu > ul.logout {
+nav.main-menu > ul.logout {
   position: absolute;
   left: 0;
   bottom: 0;
+}
+
+.main-menu:hover, nav.main-menu.expanded {
+  width: 250px;
+  overflow: visible;
 }
 
 .no-touch .scrollable.hover {
