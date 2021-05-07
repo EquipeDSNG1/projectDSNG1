@@ -1,12 +1,12 @@
-$base: #0B0909;
-$white: #D6D6D6;
-$grey: #44444C;
+$base: #262626;
+$white: #ffffff;
+$red: #eb3553;
 $height: 54px;
 $transition: 0.3s ease-out all;
 
 body {
-    background: #060002;
-    background-image: url(../Img/cape.jpeg);
+    background: #2c344c;
+    background-image: url(../Img/cape.png);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Muli";
@@ -29,7 +29,7 @@ body {
         padding: 8px;
         font-size: 0.8rem;
         font-weight: 900;
-        color: $grey;
+        color: $red;
         text-align: center;
         text-transform: uppercase;
         text-decoration: none;
@@ -78,7 +78,7 @@ body {
                 width: 100%;
                 height: 100%;
                 left: 0;
-                border: 1px solid $grey;
+                border: 1px solid $red;
                 &:before {
                     content: "";
                     width: 2px;
@@ -93,7 +93,7 @@ body {
             & span.bg {
                 left: -5%;
                 position: absolute;
-                background: $grey;
+                background: $red;
                 width: 0;
                 height: 100%;
                 z-index: 3;
