@@ -2,8 +2,6 @@ const canvas = document.
 	querySelector('canvas');
 const ctx = canvas.getContext('2d')
 
-//width = 3749;
-//height = 1904;
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 
@@ -11,7 +9,8 @@ canvas.height = innerHeight;
 var key;
 var key_run;
 
-
+var fundo = new Image();
+fundo.src = "../img/fundo.jpg";
 
 window.addEventListener('keydown', function(event) {
     key = event.key;
@@ -23,11 +22,13 @@ window.addEventListener( 'keydown', function( eventrun ) {
   });
 
 class Player {
-	constructor(x,y,v,vr){
+	constructor(x,y,radius, v,vr, color){
 		this.x = x;
         this.y = y;
+        this.radius = radius;
         this.v = v;
 	    this.vr = vr;
+        //this.color = color;
 
 		var spriteWidth = 858;
 		var spriteHeight = 250;
@@ -41,13 +42,19 @@ class Player {
 		var srcX = 0;
 		var srcY = 0;
 		var character = new Image();
-		character.src ="img.png";
-
+		character.src = "../img/img.png";
 
 		this.draw = function(){
 
-			//ctx.drawImage(character,srcX,srcY,width,height,this.x,this.y,300,300);
+			ctx.drawImage(fundo, 0, 0,canvas.width, canvas.height);
+			ctx.drawImage(character,srcX,srcY,width,height,this.x,this.y,300,300);
 
+			/*ctx.beginPath();
+			ctx.strokeStyle = this.color;
+			ctx.fillStyle = this.color;
+			ctx.arc(this.x,this.y,this.radius,0,Math.PI*2,false);
+			ctx.stroke();
+			ctx.fill();*/
 		}
 
 		this.update = function () {
@@ -77,7 +84,7 @@ class Player {
 				if((this.x - this.radius) < canvas.height){
 					this.x = this.x - this.v;
 					curFrame = ++curFrame % frameCount;
-					srcX = curFrame * width; 
+					srcX = curFrame * (width + 1); 
 				}
 
 				key = '';
@@ -154,7 +161,7 @@ function animate() {
 	bola.update();
 }
 
-
-var bola = new Player(50, 400, 10, 9);
+//X, Y, Radius, v, vr, color
+var bola = new Player(100, 100, 10, 20, 15, 'red');
 animate();
 
