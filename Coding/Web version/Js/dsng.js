@@ -106,7 +106,7 @@ class Player {
          	   }
         	    key = '';
         	}
-			if((key_run=0)&&(this.stamina<500)){
+			if((key_run==0)&&(this.stamina<500)){
 				this.stamina = this.stamina + 1
 			}
         	this.draw();
