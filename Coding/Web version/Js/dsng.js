@@ -20,6 +20,17 @@ window.addEventListener( 'keydown', function( eventrun ) {
 	console.log( key_run );
   });
 
+var mapa1;
+var mapa2;
+
+window.addEventListener('keydown', function(event) {
+    mapa1 = event.key;
+})
+
+window.addEventListener('keydown', function(event) {
+    mapa2 = event.key;
+})
+
 class Player {
 	constructor(x,y, v,vr){
 		this.x = x;
@@ -110,6 +121,19 @@ class Player {
 				key = '';
 			}
 
+			if(this.x >= 3600){
+				if(mapa1 =='1'){
+					this.x = 50;
+					this.y = 400;
+				}
+			}
+			
+			if(this.x >= 3600){
+				if(mapa1 =='2'){
+					this.x = 50;
+					this.y = 1400;
+				}
+			}
 			this.draw();
 		}
 	}
