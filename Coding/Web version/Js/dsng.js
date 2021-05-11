@@ -8,6 +8,8 @@ var key;
 var key_run;
 var key_inte;
 
+
+
 window.addEventListener('keydown', function(event) {
 	key = event.key;
 })
@@ -21,6 +23,8 @@ window.addEventListener( 'keydown', function( eventint ) {
 	key_inte = eventint.getModifierState( 'Alt' );
 	console.log( key_inte );
 });
+
+
 
 class Player {
 	constructor(x,y,radius, vr, vl, vd, vu, vrr, vrl, vrd, vru, color){
@@ -42,7 +46,7 @@ class Player {
 	    this.vrl = vrl;
 		this.vrd = vrd;
 		this.vru = vru;
-
+		this.stamina = 500;
 
         this.color = color;
 
@@ -54,14 +58,16 @@ class Player {
         	ctx.stroke();
         	ctx.fill();
     	}
-	
+		
+		if(key_run=0){this.stamina= this.stamina+1}
 
     	this.mov = function () {
         	if((key=='d') || (key=='D')) {
 				if((this.x + this.radius) < canvas.width){
       	        	this.x = this.x + this.vr;
-					if(key_run  ==  1){
+					if((key_run  ==  1)&&(this.stamina>0)){
 						this.x = this.x + this.vrr;
+						this.stamina=this.stamina-1
 					} 
 				}
        	     key = '';
@@ -70,8 +76,9 @@ class Player {
         	if((key=='A') || (key=='a')) {
 				if((this.x - this.radius) > 0){
             	    this.x = this.x - this.vl;
-					if(key_run  ==  1){
+					if((key_run  ==  1)&&(this.stamina>0)){
 						this.x = this.x - this.vrl;
+						this.stamina=this.stamina-1
 					}
            	 	}
     	      	key = '';
@@ -80,8 +87,9 @@ class Player {
        	 	if((key=='w') || (key=='W')) {
 				if(this.y-this.radius>0) {
                 	this.y = this.y - this.vu;
-					if(key_run  ==  1){
+					if((key_run  ==  1)&&(this.stamina>0)){
 						this.y = this.y - this.vru;
+						this.stamina=this.stamina-1
 					}
             	}	
             	key = '';
@@ -90,14 +98,17 @@ class Player {
        		if((key=='s') || (key=='S')) {
 				if((this.y+this.radius<canvas.height)){
         	        this.y = this.y + this.vd;
-					if(key_run  ==  1){
+					if((key_run  ==  1)&&(this.stamina>0)){
 						this.y = this.y + this.vrd;
+						this.stamina=this.stamina-1
 					}
 
          	   }
         	    key = '';
         	}
-
+			if((key_run=0)&&(this.stamina<500)){
+				this.stamina = this.stamina + 1
+			}
         	this.draw();
     	}
 
@@ -194,6 +205,7 @@ class Box{
 		this.height = height;
 		this.colorbox = colorbox;
 
+
 		this.mov
 
 		this.drawbox = function(){
@@ -287,14 +299,20 @@ class Enemy {
 
 }
 
+function hud(){
+	ctx.font='20px arial';
+	ctx.lineWidth=4;
+	ctx.fillStyle='black';
+	ctx.strokeStyle='black';
+	ctx.fillText("stamina:"+player.stamina, 10, 20);
+}
+
 interactions = function(){
 	if((player.x>=buttom.posx)&&(player.x+player.radius<=buttom.posx+buttom.height)){
 		if((player.y>=buttom.posy)&&(player.y+player.radius<=buttom.posy+buttom.height)){
 			block2.drawbox();
 		}
 	}
-
-
 
 }
 
@@ -314,9 +332,10 @@ function animate() {
 	enemy[j].update();
 	}
 	interactions();
-	
+	hud();
 
 }
+
 
 
 
@@ -330,3 +349,4 @@ var block = new Box(200,200,30,'purple')
 var block2 = new Box(500,300,30,'purple')
 
 frame();
+newContent();
