@@ -1,5 +1,4 @@
-const canvas = document.
-	querySelector('canvas');
+const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d')
 
 canvas.width = innerWidth;
@@ -22,13 +21,11 @@ window.addEventListener( 'keydown', function( eventrun ) {
   });
 
 class Player {
-	constructor(x,y,radius, v,vr, color){
+	constructor(x,y, v,vr){
 		this.x = x;
         this.y = y;
-        this.radius = radius;
         this.v = v;
 	    this.vr = vr;
-        //this.color = color;
 
 		var spriteWidth = 858;
 		var spriteHeight = 250;
@@ -48,25 +45,18 @@ class Player {
 
 			ctx.drawImage(fundo, 0, 0,canvas.width, canvas.height);
 			ctx.drawImage(character,srcX,srcY,width,height,this.x,this.y,300,300);
-
-			/*ctx.beginPath();
-			ctx.strokeStyle = this.color;
-			ctx.fillStyle = this.color;
-			ctx.arc(this.x,this.y,this.radius,0,Math.PI*2,false);
-			ctx.stroke();
-			ctx.fill();*/
 		}
 
 		this.update = function () {
 
 			if((key=='d') || (key=='D')) {
 				if(key_run  ==  1){
-					if(this.x-this.radius>=0) {
+					if(this.x - width >= 0) {
 						this.x = this.x + this.vr;
 						
 					}
 				}
-				if((this.x + this.radius) < canvas.height){
+				if((this.x + width) < canvas.width){
 					this.x = this.x + this.v;
 					curFrame = ++curFrame % frameCount;
 					srcX = curFrame * width; 
@@ -77,14 +67,14 @@ class Player {
 
 			if((key=='A') || (key=='a')) {
 				if(key_run  ==  1){
-					if(this.x-this.radius>=0) {
+					if(this.x - width >=0) {
 						this.x = this.x - this.vr;
 					}
 				}
-				if((this.x - this.radius) < canvas.height){
+				if((this.x - width) < canvas.width){
 					this.x = this.x - this.v;
 					curFrame = ++curFrame % frameCount;
-					srcX = curFrame * (width + 1); 
+					srcX = curFrame * width; 
 				}
 
 				key = '';
@@ -92,11 +82,11 @@ class Player {
 
 			if((key=='w') || (key=='W')) {
 				if(key_run  ==  1){
-					if(this.y-this.radius>=0) {
+					if(this.y - width >=0) {
 						this.y = this.y - this.vr;
 					}
 				}
-				if(this.y-this.radius>=0) {
+				if(this.y - width >=0) {
 					this.y = this.y - this.v;
 					curFrame = ++curFrame % frameCount;
 					srcX = curFrame * width; 
@@ -107,11 +97,11 @@ class Player {
 
 			if((key=='s') || (key=='S')) {
 				if(key_run  ==  1){
-					if(this.y-this.radius>=0) {
+					if(this.y- width >= 0) {
 						this.y = this.y + this.vr;
 					}
 				}
-				if((this.y + this.radius) < canvas.height){
+				if((this.y + width) < canvas.height){
 					this.y = this.y + this.v;
 					curFrame = ++curFrame % frameCount;
 					srcX = curFrame * width; 
@@ -124,6 +114,7 @@ class Player {
 		}
 	}
 }
+
 
 class Projectile {
 	constructor(x, y, radius, color, velocity) {
@@ -162,6 +153,5 @@ function animate() {
 }
 
 //X, Y, Radius, v, vr, color
-var bola = new Player(100, 100, 10, 20, 15, 'red');
+var bola = new Player(50, 400, 40, 20, 15, 'red');
 animate();
-
