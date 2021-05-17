@@ -3,10 +3,10 @@ Equipe: DSNG 1
 
 Integrantes:
 	Vinícius Gabriel Limoeiro Cauvilla 	Nº: 38		| Vermelho |
-	Kennedy Emanoel da Silveira Barbosa	Nº: 25   	|  Laranja |
-	Gabriel Mota Pereira			Nº: 16		|  Amarelo |
+	João vitor Pereira			Nº: 21   	|  Laranja |
+	Stefanie Barbosa Alceno			Nº: 35		|  Amarelo |
 	Guilherme Henrique Oliveira Silveira 	Nº: 18		|   Verde  |
-	João Vitor Pereira Domiciano		Nº: 21		|   Azul   |
+	Kennedy Emanoel da Silveira Barbosa	Nº: 25		|   Azul   |
 	André Dias Balbino 			Nº: 03		|   Roxo   |
 
 Descrição do papel:	
