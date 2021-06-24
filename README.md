@@ -1,4 +1,4 @@
-# Ciclone lost in the wild
+# Cyclone lost in the wild
 
 `We don't have game screens yet`
 
